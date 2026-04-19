@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni | DIMORA BG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-glass" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12L12 3l9 9v9H15v-5h-6v5H3V12z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>DIMORA BG</h1>
+                    <span class="tagline">Il tuo spazio a Bergamo</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="chi-siamo.html">Chi Siamo <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chi-siamo.html#storia">La Nostra Storia</a></li>
+                        <li><a href="chi-siamo.html#missione">Missione</a></li>
+                        <li><a href="chi-siamo.html#statistiche">Statistiche</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Strutture <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="apartment1.html">Dalmine — Betelli</a></li>
+                        <li><a href="apartment2.html">Bergamo — Centro</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="dettagli.html">Dettagli <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dettagli.html#costi">Costi</a></li>
+                        <li><a href="dettagli.html#contratti">Contratti</a></li>
+                        <li><a href="dettagli.html#condominio">Condominio</a></li>
+                        <li><a href="dettagli.html#prenotazione">Prenotazione</a></li>
+                        <li><a href="dettagli.html#servizi">Servizi Extra</a></li>
+                        <li><a href="dettagli.html#selezione">Selezione Ospiti</a></li>
+                        <li><a href="dettagli.html#checkin">Check-in/Check-out</a></li>
+                    </ul>
+                </li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="recensioni.html" class="active">Recensioni</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <span class="page-hero-tag">✦ La voce degli ospiti</span>
+        <h1>Recensioni</h1>
+        <p>Leggi le esperienze di chi ha già scelto DIMORA BG e condividi la tua.</p>
+    </section>
+
+    <!-- Reviews -->
+    <section class="recensioni-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Testimonianze</span>
+                <h2>Cosa dicono i nostri ospiti</h2>
+                <p>Recensioni reali da persone che vivono (o hanno vissuto) con noi.</p>
+            </div>
+
+            <div id="feedback-list"></div>
+
+            <!-- Submit form -->
+            <div class="reveal">
+                <div class="section-header" style="margin-top: 64px;">
+                    <span class="section-tag">Scrivi una Recensione</span>
+                    <h2>Condividi la tua esperienza</h2>
+                    <p>Le recensioni vengono pubblicate dopo approvazione.</p>
+                </div>
+
+                <div class="feedback-form-container">
+                    <form id="feedback-form" class="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="La tua email">
+                        </div>
+                        <div class="form-group">
+                            <label for="apartment">Appartamento *</label>
+                            <select id="apartment" name="apartment" required>
+                                <option value="">Seleziona un appartamento</option>
+                                <option value="dalmine">Dalmine — Betelli</option>
+                                <option value="bergamo">Bergamo — Centro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Valutazione *</label>
+                            <div class="rating-selector">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Commento *</label>
+                            <textarea id="comment" name="comment" required placeholder="Condividi la tua esperienza..." rows="5"></textarea>
+                        </div>
+                        <p class="form-note">Le recensioni vengono pubblicate dopo approvazione</p>
+                        <button type="submit" class="btn btn-primary">Invia Recensione</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 12L12 3l9 9v9H15v-5h-6v5H3V12z"/>
+                            </svg>
+                        </div>
+                        <span>DIMORA BG</span>
+                    </a>
+                    <p>Alloggi eleganti e confortevoli a Bergamo e dintorni, ideali per studenti e giovani professionisti.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pagine</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="recensioni.html">Recensioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Strutture</h4>
+                    <ul>
+                        <li><a href="apartment1.html">Dalmine — Betelli</a></li>
+                        <li><a href="apartment2.html">Bergamo — Centro</a></li>
+                        <li><a href="dettagli.html">Dettagli &amp; Costi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><a href="mailto:sicilianomarco@icloud.com">sicilianomarco@icloud.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DIMORA BG. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

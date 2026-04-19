@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIMORA BG — Stanze in Affitto a Bergamo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-glass" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12L12 3l9 9v9H15v-5h-6v5H3V12z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>DIMORA BG</h1>
+                    <span class="tagline">Il tuo spazio a Bergamo</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="chi-siamo.html">Chi Siamo <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="chi-siamo.html#storia">La Nostra Storia</a></li>
+                        <li><a href="chi-siamo.html#missione">Missione</a></li>
+                        <li><a href="chi-siamo.html#statistiche">Statistiche</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Strutture <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="apartment1.html">Dalmine — Betelli</a></li>
+                        <li><a href="apartment2.html">Bergamo — Centro</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="dettagli.html">Dettagli <span class="nav-chevron">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dettagli.html#costi">Costi</a></li>
+                        <li><a href="dettagli.html#contratti">Contratti</a></li>
+                        <li><a href="dettagli.html#condominio">Condominio</a></li>
+                        <li><a href="dettagli.html#prenotazione">Prenotazione</a></li>
+                        <li><a href="dettagli.html#servizi">Servizi Extra</a></li>
+                        <li><a href="dettagli.html#selezione">Selezione Ospiti</a></li>
+                        <li><a href="dettagli.html#checkin">Check-in/Check-out</a></li>
+                    </ul>
+                </li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="recensioni.html">Recensioni</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Promo Animation Section -->
+    <section class="promo-section" id="promo">
+
+        <!-- Ambient orbs -->
+        <div class="promo-orb promo-orb-1"></div>
+        <div class="promo-orb promo-orb-2"></div>
+
+        <!-- Progress bar -->
+        <div class="promo-bar"><div class="promo-bar-fill" id="promo-bar-fill"></div></div>
+
+        <!-- Top header -->
+        <header class="promo-header">
+            <div class="promo-brand-tag">
+                <span class="promo-dot"></span>
+                DIMORA BG
+            </div>
+            <span class="promo-scene-label" id="promo-scene-label">01 / 05</span>
+        </header>
+
+        <!-- Scene 1: Hook -->
+        <div class="promo-scene" id="ps-hook">
+            <p class="promo-eyebrow">Bergamo · Camere in affitto</p>
+            <h2 class="promo-hook-title">
+                <span>La</span> <span>tua</span> <span class="pac">casa,</span><br>
+                <span>anche</span> <span>lontano</span> <span>da</span> <span class="pac">casa</span>
+            </h2>
+            <div class="promo-rule"></div>
+        </div>
+
+        <!-- Scene 2: Solution -->
+        <div class="promo-scene" id="ps-solution">
+            <p class="promo-eyebrow">La nostra soluzione</p>
+            <h2 class="promo-solution-title">
+                Un servizio <em>a 360°.</em><br>
+                Pensiamo noi a <span class="pac">tutto</span>.
+            </h2>
+            <p class="promo-solution-sub">Camere completamente arredate, pronte dal primo giorno.</p>
+            <div class="promo-tags">
+                <span>Wi-Fi</span><span>Utenze</span><span>Arredamento</span><span>Supporto</span>
+            </div>
+        </div>
+
+        <!-- Scene 4: Benefits -->
+        <div class="promo-scene" id="ps-benefits">
+            <p class="promo-eyebrow">Quattro promesse</p>
+            <h2 class="promo-benefits-title">Tutto ciò che conta, <em>curato.</em></h2>
+            <div class="promo-benefits-grid">
+                <div class="promo-benefit-card"><span class="pbc-icon">🏠</span><span class="pbc-title">Appartamenti moderni</span><span class="pbc-desc">Spazi curati, puliti, pronti all'uso</span></div>
+                <div class="promo-benefit-card"><span class="pbc-icon">👥</span><span class="pbc-title">Coinquilini selezionati</span><span class="pbc-desc">Abbinamenti basati su stile di vita</span></div>
+                <div class="promo-benefit-card"><span class="pbc-icon">💰</span><span class="pbc-title">Prezzi trasparenti</span><span class="pbc-desc">Nessun costo nascosto, tutto incluso</span></div>
+                <div class="promo-benefit-card"><span class="pbc-icon">📍</span><span class="pbc-title">Posizioni centrali</span><span class="pbc-desc">A due passi dal centro di Bergamo</span></div>
+            </div>
+        </div>
+
+        <!-- Scene 5: Proof -->
+        <div class="promo-scene" id="ps-proof">
+            <p class="promo-eyebrow promo-muted">La fiducia si costruisce nel tempo</p>
+            <div class="promo-stats">
+                <div class="promo-stat"><div class="promo-stat-num" data-target="3">0</div><div class="promo-stat-plus">+</div><div class="promo-stat-label">Anni di attività</div></div>
+                <div class="promo-stat"><div class="promo-stat-num" data-target="2">0</div><div class="promo-stat-plus">+</div><div class="promo-stat-label">Appartamenti</div></div>
+                <div class="promo-stat"><div class="promo-stat-num" data-target="8">0</div><div class="promo-stat-plus">+</div><div class="promo-stat-label">Camere</div></div>
+                <div class="promo-stat"><div class="promo-stat-num" data-target="20">0</div><div class="promo-stat-plus">+</div><div class="promo-stat-label">Inquilini felici</div></div>
+            </div>
+        </div>
+
+        <!-- Scene 6: CTA -->
+        <div class="promo-scene" id="ps-cta">
+            <p class="promo-eyebrow">È il momento giusto</p>
+            <h2 class="promo-cta-title">Vieni a vedere la <em>tua</em> stanza.</h2>
+            <a href="mailto:sicilianomarco@icloud.com" class="promo-cta-btn">Prenota una visita</a>
+            <p class="promo-cta-contact">sicilianomarco@icloud.com</p>
+        </div>
+
+        <!-- Bottom dots -->
+        <div class="promo-dots-nav">
+            <div class="promo-dot-el"></div>
+            <div class="promo-dot-el"></div>
+            <div class="promo-dot-el"></div>
+            <div class="promo-dot-el"></div>
+            <div class="promo-dot-el"></div>
+        </div>
+
+        <!-- Skip -->
+        <button class="promo-skip" id="promo-skip">Salta ↓</button>
+
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-mesh">
+        <div class="hero-mesh-content">
+            <h1><span class="gradient-text-warm">La tua casa,</span><br><span class="gradient-text">anche lontano da casa</span></h1>
+            <p>Stanze moderne e confortevoli per studenti e professionisti — in posizioni strategiche a Bergamo e provincia.</p>
+            <div class="cta-buttons">
+                <a href="recensioni.html" class="btn btn-primary">Cosa dicono di noi</a>
+                <a href="dettagli.html" class="btn btn-secondary">Scopri i Dettagli</a>
+            </div>
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <span class="card-icon">🏠</span>
+                    <span class="card-value">Comfort Moderno</span>
+                    <span class="card-label">Stanze completamente arredate con tutti i servizi essenziali inclusi</span>
+                </div>
+                <div class="hero-card">
+                    <span class="card-icon">📍</span>
+                    <span class="card-value">Posizione Strategica</span>
+                    <span class="card-label">Appartamenti ben collegati con università, trasporti, palestre e servizi della città</span>
+                </div>
+                <div class="hero-card">
+                    <span class="card-icon">👥</span>
+                    <span class="card-value">Comunità Accogliente</span>
+                    <span class="card-label">Convivenza serena tra studenti e lavoratori in ambienti puliti e rispettosi</span>
+                </div>
+                <div class="hero-card">
+                    <span class="card-icon">💼</span>
+                    <span class="card-value">Gestione Professionale</span>
+                    <span class="card-label">Supporto dedicato, risposta rapida e gestione trasparente senza spese nascoste</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Dove Siamo</span>
+                <h2>Esplorare il quartiere</h2>
+                <p>Seleziona un appartamento e clicca un luogo vicino per vedere il percorso a piedi e i dettagli.</p>
+            </div>
+
+            <div class="map-filters" id="map-filters"></div>
+
+            <div class="map-wrapper">
+                <div id="map"></div>
+                <div class="map-loading" id="map-loading">
+                    <div class="map-spinner"></div>
+                    <p>Caricamento punti di interesse…</p>
+                </div>
+                <div class="map-info-panel" id="map-info-panel">
+                    <div class="info-panel-header">
+                        <span class="info-icon" id="info-icon"></span>
+                        <div class="info-title">
+                            <span class="info-category-label" id="info-category"></span>
+                            <h4 id="info-name"></h4>
+                        </div>
+                        <button class="info-close" id="info-close" aria-label="Chiudi">×</button>
+                    </div>
+                    <div class="info-stats">
+                        <div class="info-stat">
+                            <span class="stat-label">📍 Distanza</span>
+                            <span class="stat-value" id="info-distance">—</span>
+                        </div>
+                        <div class="info-stat">
+                            <span class="stat-label">🚶 A piedi</span>
+                            <span class="stat-value" id="info-walk">—</span>
+                        </div>
+                    </div>
+                    <p class="info-status" id="info-status"></p>
+                    <div class="info-extra" id="info-extra" style="display:none">
+                        <div class="info-extra-row" id="info-phone-row" style="display:none">
+                            <span class="extra-label">📞</span>
+                            <a class="extra-value" id="info-phone" href=""></a>
+                        </div>
+                        <div class="info-extra-row" id="info-hours-row" style="display:none">
+                            <span class="extra-label">🕐</span>
+                            <span class="extra-value" id="info-hours"></span>
+                        </div>
+                        <div class="info-extra-row" id="info-web-row" style="display:none">
+                            <span class="extra-label">🌐</span>
+                            <a class="extra-value" id="info-web" href="" target="_blank" rel="noopener noreferrer">Sito web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark CTA -->
+    <section class="cta-dark">
+        <h2>Pronto a trovare<br>la tua stanza?</h2>
+        <p>Contattaci per programmare una visita o per qualsiasi domanda sulle disponibilità.</p>
+        <div class="cta-buttons">
+            <a href="mailto:sicilianomarco@icloud.com" class="btn btn-primary">Contattaci ora</a>
+            <a href="dettagli.html" class="btn btn-secondary">Scopri i Dettagli</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 12L12 3l9 9v9H15v-5h-6v5H3V12z"/>
+                            </svg>
+                        </div>
+                        <span>DIMORA BG</span>
+                    </a>
+                    <p>Alloggi eleganti e confortevoli a Bergamo e dintorni, ideali per studenti e giovani professionisti.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pagine</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="recensioni.html">Recensioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Strutture</h4>
+                    <ul>
+                        <li><a href="apartment1.html">Dalmine — Betelli</a></li>
+                        <li><a href="apartment2.html">Bergamo — Centro</a></li>
+                        <li><a href="dettagli.html">Dettagli &amp; Costi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><a href="mailto:sicilianomarco@icloud.com">sicilianomarco@icloud.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DIMORA BG. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/local-pois.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
