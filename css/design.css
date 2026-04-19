@@ -439,7 +439,12 @@ body { font-family: var(--font-primary); }
         padding: 8px 10px;
         font-size: 12px;
         border-radius: 6px;
-        color: rgba(28, 22, 18, 0.48);
+        color: rgba(28, 22, 18, 0.62);
+    }
+
+    .dropdown-menu li a:hover {
+        color: #1c1612;
+        background: rgba(200, 150, 108, 0.09);
     }
 }
 
